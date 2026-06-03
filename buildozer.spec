@@ -19,3 +19,5 @@ presplash.filename = icon.png
 [buildozer]
 log_level = 2
 warn_on_root = 1
+# نحدد إصدار البناء لضمان الاستقرار
+build_mode = debug
