@@ -1,0 +1,61 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<HomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 20
+        canvas.before:
+            Color:
+                rgba: hex('#F5F7FA')
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "LexInvoice Pro"
+            font_size: '32sp'
+            bold: True
+            color: hex('#1E5EFF')
+            size_hint_y: None
+            height: 60
+
+        Label:
+            text: "Ahmed Osama"
+            font_size: '14sp'
+            color: hex('#1E293B')
+            size_hint_y: None
+            height: 20
+
+        GridLayout:
+            cols: 1
+            spacing: 15
+            padding: [0, 20, 0, 20]
+
+            Button:
+                text: "+ Create Invoice"
+                background_normal: ''
+                background_color: hex('#1E5EFF')
+                color: 1, 1, 1, 1
+                bold: True
+            Button:
+                text: "+ Create Contract"
+                background_normal: ''
+                background_color: hex('#1E5EFF')
+                color: 1, 1, 1, 1
+                bold: True
+            Button:
+                text: "Clients"
+                background_normal: ''
+                background_color: hex('#FFFFFF')
+                color: hex('#1E5EFF')
+                bold: True
+            Button:
+                text: "Reports"
+                background_normal: ''
+                background_color: hex('#FFFFFF')
+                color: hex('#1E5EFF')
+                bold: True
+
+ScreenManager:
+    HomeScreen:
