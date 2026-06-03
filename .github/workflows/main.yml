@@ -11,7 +11,6 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          # نقوم بتثبيت الحزم الأساسية ونستخدم || true لتجاهل الحزم التي قد لا تكون موجودة في النسخة الحديثة
           sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev || true
 
       - name: Install Buildozer and Cython
@@ -21,8 +20,8 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # سنقوم بضبط إعدادات Buildozer ليتم البناء بدون تفاعل
-          buildozer android debug
+          # الموافقة التلقائية على رخص الأندرويد
+          yes | buildozer android debug
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
